@@ -1,2 +1,0 @@
-# paywall
-Created with CodeSandbox
