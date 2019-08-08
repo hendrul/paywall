@@ -1,36 +1,35 @@
-import React from "react";
-import "./paywall.css";
+import React from 'react'
+import './paywall.css'
 
-import logoUrl from "../resources/images/logo.svg";
-import Link from "../_children/link";
-import Icon from "../_children/icon";
-import SupportDialog from "../_children/support-dialog";
+import logoUrl from '../resources/images/logo.svg'
+import Link from '../_children/link'
+import Icon from '../_children/icon'
+import SupportDialog from '../_children/support-dialog'
 
 const Foot = () => {
-  const [supportOpen, setSupportOpen] = React.useState(false);
-  const [opacity, setOpacity] = React.useState(0);
-  const toggleModal = () => setSupportOpen(!supportOpen);
+  const [supportOpen, setSupportOpen] = React.useState(false)
+  const [opacity, setOpacity] = React.useState(0)
+  const toggleModal = () => setSupportOpen(!supportOpen)
   const afterOpen = () => {
     setTimeout(() => {
-      setOpacity(1);
-    });
-  };
+      setOpacity(1)
+    })
+  }
   const beforeClose = () => {
     return new Promise(resolve => {
-      setOpacity(0);
-      setTimeout(resolve, 200);
-    });
-  };
+      setOpacity(0)
+      setTimeout(resolve, 200)
+    })
+  }
   return (
     <div className="foot">
-      <SupportDialog showClose open={supportOpen} onClose={toggleModal} />
       <div className="footer-content">
         <div>
           <div>
             <img src={logoUrl} alt="Gestión" className="img logo" />
           </div>
           <p className="text">
-            Contáctanos al <a href="tel:+5113115100">01 311-5100</a> o{" "}
+            Contáctanos al <a href="tel:+5113115100">01 311-5100</a> o{' '}
             <a href="mailto:suscriptores@diariogestion.com.pe">
               suscriptores@diariogestion.com.pe
             </a>
@@ -46,7 +45,7 @@ const Foot = () => {
               <Link href="/" className="list_link" onClick={toggleModal}>
                 Soporte
               </Link>
-              {/* <SupportDialog
+              <SupportDialog
                 isOpen={supportOpen}
                 afterOpen={afterOpen}
                 beforeClose={beforeClose}
@@ -55,7 +54,7 @@ const Foot = () => {
                 onEscapeKeydown={toggleModal}
                 opacity={opacity}
                 backgroundProps={{ opacity: opacity }}
-              /> */}
+              />
             </li>
             <li>
               <a
@@ -149,7 +148,7 @@ const Foot = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Foot;
+export default Foot

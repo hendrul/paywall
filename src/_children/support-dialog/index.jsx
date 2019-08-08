@@ -1,9 +1,8 @@
 import React from 'react'
-import Modal2, { BaseModalBackground } from 'styled-react-modal'
+import Modal, { BaseModalBackground } from 'styled-react-modal'
 import styled from 'styled-components'
 
 import { devices } from '../../_dependencies/devices'
-import Modal from '../modal'
 
 import {
   CloseButton,
