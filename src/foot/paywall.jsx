@@ -23,6 +23,7 @@ const Foot = () => {
   };
   return (
     <div className="foot">
+      <SupportDialog showClose open={supportOpen} onClose={toggleModal} />
       <div className="footer-content">
         <div>
           <div>
@@ -55,11 +56,6 @@ const Foot = () => {
                 opacity={opacity}
                 backgroundProps={{ opacity: opacity }}
               /> */}
-              <SupportDialog
-                showClose
-                open={supportOpen}
-                onClose={toggleModal}
-              />
             </li>
             <li>
               <a

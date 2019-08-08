@@ -15,7 +15,6 @@ export const Modal = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  overflow: auto;
   opacity: 0;
   pointer-events: none;
   position: fixed;
@@ -34,11 +33,11 @@ export const Modal = styled.div`
 `;
 
 export const Content = styled.div`
-  position: absolute;
+  position: relative;
 `;
 
 export const CloseButton = styled(props => (
-  <button {...props}>
+  <button type="button" {...props}>
     <Icon type="close" />
   </button>
 ))`
@@ -46,5 +45,6 @@ export const CloseButton = styled(props => (
   top: 30px;
   right: 30px;
   border: none;
+  z-index: 1000;
   background: none;
 `;
